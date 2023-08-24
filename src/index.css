@@ -304,7 +304,7 @@ PROJECT CSS
 Toggle Container
 ========
 */
-
+/* 
 .toggle-container {
   width: var(--view-width);
   max-width: var(--max-width);
@@ -326,13 +326,13 @@ Toggle Container
 .toggle-icon {
   font-size: 1.5rem;
   color: var(--textColor);
-}
+} */
 /* 
 ========
 Search Form
 ========
 */
-.title {
+/* .title {
   color: var(--primary-500);
 }
 .search-form {
@@ -348,25 +348,25 @@ Search Form
   border-color: var(--grey-300);
   transition: var(--darkModeTransition);
   color: var(--textColor);
-  border-radius: 0;
+  border-radius: 0; */
 
-  /* border-right: none; */
-}
+/* border-right: none; */
+/* } */
 
-.search-form .btn {
+/* .search-form .btn {
   border-radius: 0;
 }
 .search-form .btn:hover {
   background: var(--primary-300);
   color: var(--black);
-}
+} */
 
 /* 
 ========
 Gallery
 ========
 */
-
+/* 
 .image-container {
   width: var(--view-width);
   max-width: var(--max-width);
@@ -385,6 +385,82 @@ Gallery
   }
 }
 @media (min-width: 992px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+
+/* toggle container */
+
+.toggle-container {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  padding: 1rem 0;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: flex-end;
+}
+.dark-toggle {
+  background: transparent;
+  border-color: transparent;
+  width: 5rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+/* search Form */
+
+.title {
+  color: var(--primary-500);
+}
+.search-form {
+  width: var(--view-width);
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.search-input {
+  border-color: var(--grey-300);
+  transition: var(--darkModeTransition);
+  color: var(--textColor);
+  border-radius: 0;
+}
+.search-form .btn {
+  border-radius: 0;
+}
+.search-form .btn:hover {
+  background: var(--primary-300);
+  color: var(--black);
+}
+
+/* Gallery */
+
+.image-container {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+}
+.image-container .img {
+  height: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
   .image-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
